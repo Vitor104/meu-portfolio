@@ -19,3 +19,6 @@
     font-size: 20px;
   }
 
+a.teste {
+    border-bottom: 5px solid rgb(255, 0, 0);
+}

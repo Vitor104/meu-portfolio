@@ -9,9 +9,11 @@ function Home () {
                 <NavBar />
             </nav>
             
-            <p>
-                fafafa
-            </p>
+           <main>
+                <section>
+                    
+                </section>
+           </main>
         </div>
     )
 }
