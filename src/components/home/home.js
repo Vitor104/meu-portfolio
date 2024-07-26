@@ -3,6 +3,7 @@ import styles from './home.module.css';
 import NavBar from "../navBar/navBar";
 import minhaFoto from './minhaFoto.jpg';
 import githubIcon from './githubIcon.png';
+import linkedinLogo from './logoLinkedin.png';
 import { Link } from "react-router-dom";
 
 function Home () {
@@ -31,8 +32,11 @@ function Home () {
 
            <footer className={styles.footer}>
             
-            <Link>
-                <img className={styles.socials} src={githubIcon} alt="my github" />
+            <Link to='https://github.com/Vitor104'>
+                <img className={styles.socialGithub} src={githubIcon} alt="my github" />
+            </Link>
+            <Link to='www.linkedin.com/in/jvvitor'>
+                <img className={styles.socialIn} src={linkedinLogo} alt="my linkedin account" />
             </Link>
            </footer>
         </div>

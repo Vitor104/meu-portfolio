@@ -58,7 +58,12 @@
     justify-content: space-evenly;
   }
 
-  .socials {
-    height: 5em;
-    width: 5em;
+  .socialGithub, .socialIn {
+    height: 4em;
+    width: 4em;
+  }
+
+  .socialIn {
+    background-color: white;
+    border-radius: 15px;
   }
