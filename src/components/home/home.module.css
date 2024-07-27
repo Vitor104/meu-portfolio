@@ -23,8 +23,10 @@
   }
 
   .details {
-    background-color: #000000;
-    color: white;
+    background-color: #ffffff;
+    border: 1px solid black;
+    box-shadow: 12px 12px 10px 5px;
+    color: rgb(0, 0, 0);
     height: 15em;
     width: 15em;
     border-radius: 50%;    
