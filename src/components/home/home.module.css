@@ -22,19 +22,25 @@
     justify-content: space-evenly;
   }
 
-  .picture {
-    width: 15em;
+  .details {
+    background-color: #000000;
+    color: white;
     height: 15em;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 5px 5px 20px -1px;
+    width: 15em;
+    border-radius: 50%;    
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
-  .name {
+   
+   .myName {
     font-size: 25px;
   }
 
-  .title {
-    font-size: 15px;
+  
+  .myRole {
+    font-size: 15px
   }
 
   

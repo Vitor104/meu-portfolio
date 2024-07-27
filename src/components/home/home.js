@@ -1,7 +1,6 @@
 import React from "react";
 import styles from './home.module.css';
 import NavBar from "../navBar/navBar";
-import minhaFoto from './minhaFoto.jpg';
 import githubIcon from './githubIcon.png';
 import linkedinLogo from './logoLinkedin.png';
 import { Link } from "react-router-dom";
@@ -15,10 +14,15 @@ function Home () {
             
            <main className={styles.main}>
                 <section>
-                    <article>
-                        <img className={styles.picture} alt="minha foto" src={minhaFoto} />
-                        <h1 className={styles.name}>João Vitor</h1>
-                        <h2 className={styles.title}>Desenvolvedor Front-End</h2>
+                    
+                    <article className={styles.details}>
+                    <h1 className={styles.myName}>
+                      João Vitor
+                    </h1>
+
+                    <h2 className={styles.myRole}>
+                        Desenvolvedor Front-End
+                    </h2>
                     </article>
                 </section>
 
@@ -45,3 +49,12 @@ function Home () {
 
 
 export default Home;
+/*
+<p className={styles.paragraphs}>Olá! Meu nome é </p>
+<div className={styles.nameAndRole}>
+<h1 className={styles.myName}>João Vitor</h1>
+</div>
+<p className={styles.paragraphs}>e eu sou</p>
+<div className={styles.nameAndRole}> 
+<h2 className={styles.myRole}>desenvolvedor Front-End</h2>
+</div>*/
