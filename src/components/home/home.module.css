@@ -54,7 +54,6 @@
     margin-top: 1em;
     font-weight: bold;
     color: black;
-    
     text-align: left;
     text-wrap: wrap;
     line-height: 25px;
@@ -91,3 +90,22 @@
     from {transform: translate(-150px); color: #001F54}
   }
   
+  @media only screen and (min-width: 768px) {
+    .myName {
+      font-size: 80px;
+    }
+
+    .aboutMe {
+      width: 70%;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .myName {
+      font-size: 90px;
+    }
+
+    .aboutMe {
+      width: 60%;
+    }
+  }
