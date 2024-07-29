@@ -64,7 +64,11 @@
 
 @media only screen and (min-width: 1440px) {
     .introContainer {
-        height: 50em;
+        height: 70em;
+    }
+
+    .title, .titleName {
+        font-size: 80px;
     }
 }
 
