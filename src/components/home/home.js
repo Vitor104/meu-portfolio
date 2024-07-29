@@ -14,16 +14,11 @@ function Home () {
             
            <main className={styles.main}>
                 <section>
-                    
-                    <article className={styles.details}>
-                    <h1 className={styles.myName}>
-                      João Vitor
-                    </h1>
-
-                    <h2 className={styles.myRole}>
-                        Desenvolvedor Front-End
-                    </h2>
+                    <article className={styles.nameAndRole}>
+                        <h1 className={styles.myName}>João <br></br>  Vitor</h1>
+                        <h2 className={styles.myRole}>Desenvolvedor Front-End</h2>
                     </article>
+                    
                 </section>
 
                 <section className={styles.aboutMeSection}>

@@ -6,7 +6,7 @@
   
 
 .introContainer {
-    background-color: #F9F6F1;
+    background-color: #001F54;
     height: 41em;
     width: 100%;
     display: flex;
@@ -18,7 +18,7 @@
 
 .titleName {
     font-size: 50px;
-    color: #FFD700;
+    color: #00A9A5;
     animation-name: introMotion;
     animation-duration: 1s;
 }
@@ -27,21 +27,23 @@
     font-size: 50px;
     animation-name: introMotion;
     animation-duration: 1.5s;
+    color: white;
 }
 
 .button {
     padding: 1em;
     border: none;
     border-radius: 10px;
-    background-color: #FFD700;
+    background-color: #00A9A5;
+    color: white;
     animation-name: introMotion;
     animation-duration: 2s;
     text-decoration: none;
 }
 
 .button:active {
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 @media only screen and (min-width: 1024px) {

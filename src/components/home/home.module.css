@@ -13,7 +13,7 @@
   }
 
   .main {
-    background-color: #F9F6F1;
+    background-color: #001F54;
     height: 100em;
     width: 100%;
     display: flex;
@@ -22,30 +22,27 @@
     justify-content: space-evenly;
   }
 
-  .details {
-    background-color: #ffffff;
-    border: 1px solid black;
-    box-shadow: 12px 12px 10px 5px;
-    color: rgb(0, 0, 0);
-    height: 15em;
-    width: 15em;
-    border-radius: 50%;    
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    justify-content: space-evenly;
+  .nameAndRole {
+    width: 90%;
+    margin: 0 auto;
   }
-   
-   .myName {
-    font-size: 25px;
+  .myName {
+    font-size: 50px;
+    text-transform: uppercase;
+    float: left;
+    color: #ffffff;
   }
 
-  
   .myRole {
-    font-size: 15px
+    font-size: 15px;
+    text-transform: uppercase;
+    float: left;
+    color: white;
   }
 
-  
+  .aboutMeSection {
+    color: white;
+  }
 
   .aboutMe {
     width: 90%;
@@ -55,12 +52,18 @@
     padding: 2em;
     margin-top: 1em;
     font-weight: bold;
+    color: black;
+    
+    text-align: left;
+    text-wrap: wrap;
+    line-height: 25px;
+    white-space: wrap;
   }
 
   .footer {
     height: 7em;
     width: 100%;
-    background-color: #2E1A47;
+    background-color: #F5F5F5;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -69,9 +72,11 @@
   .socialGithub, .socialIn {
     height: 4em;
     width: 4em;
+   
   }
 
-  .socialIn {
-    background-color: white;
-    border-radius: 15px;
+  .socialGithub {
+    background-color: rgb(0, 0, 0);
+    border-radius: 55%;
+    border: 1px solid black;
   }
