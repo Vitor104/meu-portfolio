@@ -20,6 +20,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    
   }
 
   .nameAndRole {
@@ -80,3 +81,13 @@
     border-radius: 55%;
     border: 1px solid black;
   }
+
+  .myName, .myRole, .aboutMe, .socialGithub, .socialIn {
+    animation-name: homeEffect;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes homeEffect {
+    from {transform: translate(-150px); color: #001F54}
+  }
+  
