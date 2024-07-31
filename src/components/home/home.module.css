@@ -102,13 +102,14 @@
 
   @media only screen and (min-width: 1024px) {
     
+   
 
     .myName {
       font-size: 90px;
     }
 
     .aboutMe {
-      width: 60%;
+      width: 40%;
     }
 
     
