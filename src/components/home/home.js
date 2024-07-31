@@ -1,11 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from './home.module.css';
 import NavBar from "../navBar/navBar";
 import githubIcon from './githubIcon.png';
 import linkedinLogo from './logoLinkedin.png';
+import arrow from './arrow-down.svg';
 import { Link } from "react-router-dom";
 
 function Home () {
+
+    const [tggAbout, setTggAbout] = useState(false);
+
+    const toggleAbout = () => {
+        setTggAbout(!tggAbout);
+    }
+
+
     return (
         <div className={styles.homeContainer}>
             <nav>
@@ -21,11 +30,27 @@ function Home () {
                     
                 </section>
 
-                <section className={styles.aboutMeSection}>
-                    <h2>Sobre mim</h2>
-                    <p className={styles.aboutMe}>
-                    Olá! Sou um desenvolvedor front-end apaixonado e dedicado, gosto de transformar problemas complexos em designs simples, bonitos e intuitivos. Estou sempre aprendendo e me mantendo atualizado com as últimas tendências. Atualmente, estou em busca da minha primeira oportunidade na área, onde eu possa contribuir com minhas habilidades e crescer como desenvolvedor. Sinta-se à vontade para conferir meu portfólio e entrar em contato comigo. Estou ansioso pela possibilidade de trabalharmos juntos!
+                <section className={styles.aboutMeContainer}>
+                   <div className={styles.aboutTitleAndBttn}>
+                        <h2>Sobre mim</h2>
+                        <button onClick={toggleAbout} className={styles.showAbout}>
+                            <img src={arrow} alt="Bootstrap" width="30" height="30" />
+                        </button>
+                    </div>
+                    <div>  
+
+                    {tggAbout ?
+                        <p className={styles.aboutMe}>
+                        Olá! Sou um desenvolvedor front-end apaixonado e dedicado, gosto de transformar problemas complexos em designs simples, bonitos e intuitivos. Estou sempre aprendendo e me mantendo atualizado com as últimas tendências. Atualmente, estou em busca da minha primeira oportunidade na área, onde eu possa contribuir com minhas habilidades e crescer como desenvolvedor. Sinta-se à vontade para conferir meu portfólio e entrar em contato comigo. Estou ansioso pela possibilidade de trabalharmos juntos!
                     </p>
+                         :
+                         <></>
+                            }
+
+
+                        
+                    </div>
+
                 </section>
            </main>
 
@@ -45,11 +70,11 @@ function Home () {
 
 export default Home;
 /*
-<p className={styles.paragraphs}>Olá! Meu nome é </p>
-<div className={styles.nameAndRole}>
-<h1 className={styles.myName}>João Vitor</h1>
-</div>
-<p className={styles.paragraphs}>e eu sou</p>
-<div className={styles.nameAndRole}> 
-<h2 className={styles.myRole}>desenvolvedor Front-End</h2>
-</div>*/
+ <h2>Sobre mim</h2>
+                    <p className={styles.aboutMe}>
+                    Olá! Sou um desenvolvedor front-end apaixonado e dedicado, gosto de transformar problemas complexos em designs simples, bonitos e intuitivos. Estou sempre aprendendo e me mantendo atualizado com as últimas tendências. Atualmente, estou em busca da minha primeira oportunidade na área, onde eu possa contribuir com minhas habilidades e crescer como desenvolvedor. Sinta-se à vontade para conferir meu portfólio e entrar em contato comigo. Estou ansioso pela possibilidade de trabalharmos juntos!
+                    </p>
+
+
+
+*/
