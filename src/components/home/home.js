@@ -3,7 +3,8 @@ import styles from './home.module.css';
 import NavBar from "../navBar/navBar";
 import githubIcon from './githubIcon.png';
 import linkedinLogo from './logoLinkedin.png';
-import arrow from './arrow-down.svg';
+import arrowDown from './arrow-down.svg';
+import arrowUp from './arrow-up.svg';
 import { Link } from "react-router-dom";
 
 function Home () {
@@ -34,7 +35,7 @@ function Home () {
                    <div className={styles.aboutTitleAndBttn}>
                         <h2>Sobre mim</h2>
                         <button onClick={toggleAbout} className={styles.showAbout}>
-                            <img src={arrow} alt="Bootstrap" width="30" height="30" />
+                            <img className={styles.arrow} src={tggAbout ? arrowUp : arrowDown} alt="Bootstrap" width="30" height="30" />
                         </button>
                     </div>
                     <div>  

@@ -70,8 +70,12 @@
   } 
 
   .aboutMe {
-    animation-name: teste;
+    animation-name: aboutShow;
     animation-duration: 2s;
+  }
+
+  .arrow {
+    transition: 2s;
   }
 
   .footer {
@@ -100,8 +104,12 @@
     animation-duration: 1.5s;
   }
 
-  @keyframes teste {
-      from {transform: translateY(-50px);}  
+  @keyframes aboutShowArr {
+    from {transform: translateY(-50px);}  
+  }
+
+  @keyframes aboutShow {
+      from {transform: translateY(-20px);}  
   }
 
   @keyframes homeEffect {
