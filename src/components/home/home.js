@@ -6,15 +6,23 @@ import linkedinLogo from './logoLinkedin.png';
 import arrowDown from './arrow-down.svg';
 import arrowUp from './arrow-up.svg';
 import { Link } from "react-router-dom";
+import brazil from './brazil-.png';
+import franca from './france.png';
+import esperanto from './esperanto.png';
+import ingles from './united-kingdom.png';
 
 function Home () {
 
     const [tggAbout, setTggAbout] = useState(false);
+    const [tggLang, setTggLang] = useState(false);
 
     const toggleAbout = () => {
         setTggAbout(!tggAbout);
     }
-
+    
+    const toggleLanguage = () => {
+        setTggLang(!tggLang);
+    }
 
     return (
         <div className={styles.homeContainer}>
@@ -31,6 +39,8 @@ function Home () {
                     
                 </section>
 
+                <div className={styles.containerOfAll}>
+
                 <section className={styles.aboutMeContainer}>
                    <div className={styles.aboutTitleAndBttn}>
                         <h2>Sobre mim</h2>
@@ -38,7 +48,7 @@ function Home () {
                             <img className={styles.arrow} src={tggAbout ? arrowUp : arrowDown} alt="Bootstrap" width="30" height="30" />
                         </button>
                     </div>
-                    <div>  
+                   
 
                     {tggAbout ?
                         <p className={styles.aboutMe}>
@@ -50,9 +60,46 @@ function Home () {
 
 
                         
+                    
+                </section>
+
+                <section className={styles.languagesContainer}>
+                    <div className={styles.langTitleAndBttn}>
+                        <h2>Idiomas</h2>
+                        <button onClick={toggleLanguage} className={styles.showLang}>
+                            <img className={styles.arrow} src={tggLang ? arrowUp : arrowDown} alt="Bootstrap" width="30" height="30" />
+                        </button>
                     </div>
 
+                    {tggLang ?
+                        <section className={styles.languages}>
+                            <article>
+                                <img className={styles.flags} src={brazil} alt="brazilian flag" />
+                                <p className={styles.langLevel}>Nativo</p>
+                            </article>
+
+                            <article>
+                                <img className={styles.flags} src={franca} alt="french flag"/>
+                                <p className={styles.langLevel}>B1</p>
+                            </article>
+
+                            <article>
+                                <img className={styles.flags} src={ingles} alt="united kingdom flag"/>
+                                <p className={styles.langLevel}>C1</p>
+                            </article>
+
+                            <article>
+                                <img className={styles.flags} src={esperanto} alt="esperanto flag"/>
+                                <p className={styles.langLevel}>A2</p>
+                            </article>
+                        </section>
+                         :
+                         <></>
+                            }      
+
                 </section>
+
+                </div>
            </main>
 
            <footer className={styles.footer}>

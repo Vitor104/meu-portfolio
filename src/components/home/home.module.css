@@ -41,22 +41,7 @@
     color: white;
   }
 
-  
-  .aboutTitleAndBttn {
-    width: 16em;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
-  }
-
-  .showAbout {
-    background-color: white;
-    border: none;
-  }
-
-  .aboutMeContainer {
+  .containerOfAll {
     background-color: white;
     color: black;
     width: 16em;
@@ -66,17 +51,57 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+  }
 
-  } 
+  
+  .aboutTitleAndBttn, .langTitleAndBttn {
+    width: 16em;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+  .showAbout, .showLang {
+    background-color: white;
+    border: none;
+  }
 
   .aboutMe {
     animation-name: aboutShow;
-    animation-duration: 2s;
+    animation-duration: 1s;
+    z-index: 1;
+    position: absolute;
+    background-color: white;
+    width: 16em;
+    padding: 0.5em;
+    border-radius: 10px;
+    border: none;
   }
 
   .arrow {
     transition: 2s;
   }
+
+  .languages {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .flags {
+    height: 3em;
+    width: 3em;
+    animation-name: showFlag;
+    animation-duration: 1s;
+  }
+
+  .langLevel {
+    animation-name: showFlag;
+    animation-duration: 1s;
+  }
+
 
   .footer {
     height: 7em;
@@ -104,12 +129,12 @@
     animation-duration: 1.5s;
   }
 
-  @keyframes aboutShowArr {
-    from {transform: translateY(-50px);}  
-  }
+  @keyframes showFlag {
+    from {transform: translateY(-5px);}  
+}
 
   @keyframes aboutShow {
-      from {transform: translateY(-20px);}  
+      from {transform: translateY(-5px);}  
   }
 
   @keyframes homeEffect {
@@ -124,28 +149,95 @@
     .myName {
       font-size: 80px;
     }
-
-    .aboutMe {
-      width: 70%;
-    }
   }
 
   @media only screen and (min-width: 1024px) {
     
-   
+    .containerOfAll {
+      width: 40em;
+    }
+
+    .aboutTitleAndBttn, .langTitleAndBttn {
+      width: 20em;
+    }
+
+    .aboutMe {
+      width: 20em;
+      height: 15em;
+      padding: 0;
+    }
 
     .myName {
       font-size: 90px;
     }
-
-    .aboutMe {
-      width: 40%;
-    }
-
-    
-
   }
 
+  @media only screen and (min-width: 1440px) {
+    .myName {
+      font-size: 100px;
+    }
+
+    .aboutTitleAndBttn, .langTitleAndBttn {
+      font-size: large;
+      width: 30em;
+      justify-content: center;
+      gap: 2em;
+    } 
+
+    .containerOfAll {
+      width: 60em;
+      height: 40em;
+    }
+
+    .aboutMe {
+      width: 30em;
+      height: 10em;
+      font-size: large;
+      padding: 0;
+    }
+
+    .flags {
+      height: 6em;
+      width: 6em;
+    }
+  
+    .langLevel {
+      font-size: large;
+    }
+  }
+
+  @media only screen and (min-width: 2560px) {
+    .homeContainer {
+      width: 50%;
+      margin: 0 auto;
+      height: 100%;
+    }
+
+    .myName {
+      font-size: 150px;
+    }
+
+    .myRole {
+      font-size: 45px;
+    }
+
+    .aboutTitleAndBttn, .langTitleAndBttn {
+      font-size: xx-large;
+    } 
+
+    .aboutMe {
+      font-size: xx-large;
+    }
+
+    .flags {
+      height: 10em;
+      width: 10em;
+    }
+  
+    .langLevel {
+      font-size: xx-large;
+    }
+  }
   
   /*
   

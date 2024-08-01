@@ -23,3 +23,15 @@
 a.teste {
     border-bottom: 5px solid rgb(255, 0, 0);
 }
+
+@media only screen and (min-width: 1440px) {
+  .textNav {
+    font-size: x-large;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .textNav {
+    font-size: xx-large;
+  }
+}
