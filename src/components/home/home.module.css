@@ -64,8 +64,14 @@
   }
 
   .showAbout, .showLang {
-    background-color: white;
+    background-color: #00A9A5;
     border: none;
+    width: 3em;
+    border-radius: 50%;
+  }
+
+  .showAbout:active, .showLang:active {
+    border: 1px solid black;
   }
 
   .aboutMe {
@@ -82,6 +88,7 @@
 
   .arrow {
     transition: 2s;
+    
   }
 
   .languages {
