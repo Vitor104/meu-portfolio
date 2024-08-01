@@ -167,12 +167,11 @@
     }
 
     .aboutTitleAndBttn, .langTitleAndBttn {
-      width: 20em;
+      width: 30em;
     }
 
     .aboutMe {
-      width: 20em;
-      height: 15em;
+      width: 30em;
       padding: 0;
     }
 
