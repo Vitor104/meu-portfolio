@@ -12,26 +12,32 @@
     align-items: center;
     justify-content: space-evenly;
   }
-
+  
   .textNav {
     color: #000000;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
     font-size: 20px;
   }
-
-a.teste {
-    border-bottom: 5px solid rgb(255, 0, 0);
+  
+a:active {
+  border-bottom: 5px solid #00A9A5;
 }
-
-@media only screen and (min-width: 1440px) {
+  
+ 
+  @media only screen and (min-width: 1440px) {
   .textNav {
     font-size: x-large;
   }
-}
-
-@media only screen and (min-width: 2560px) {
-  .textNav {
+  }
+  
+  @media only screen and (min-width: 2560px) {
+  
+    .nav {
+      width: 50%;
+      margin: 0 auto;
+    }
+    .textNav {
     font-size: xx-large;
   }
-}
+  }
