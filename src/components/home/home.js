@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import styles from './home.module.css';
-import NavBar from "../navBar/navBar";
 import githubIcon from './githubIcon.png';
 import linkedinLogo from './logoLinkedin.png';
 import arrowDown from './arrow-down.svg';
@@ -10,6 +9,7 @@ import brazil from './brazil-.png';
 import franca from './france.png';
 import esperanto from './esperanto.png';
 import ingles from './united-kingdom.png';
+
 
 function Home () {
 
@@ -25,11 +25,7 @@ function Home () {
     }
 
     return (
-        <div className={styles.homeContainer}>
-            <nav>
-                <NavBar />
-            </nav>
-            
+        <div className={styles.homeContainer}>            
            <main className={styles.main}>
                 <section>
                     <article className={styles.nameAndRole}>

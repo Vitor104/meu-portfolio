@@ -6,10 +6,46 @@
 
 .appContainer {
   text-align: center;
-  
   width: 100%;
   display: flex;
   flex-direction: column;
   background-color: #F9F6F1;
 }
 
+
+.nav {
+  height: 7em;
+  width: 100%;
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.textNav {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+a.teste {
+  border-bottom: 5px solid rgb(255, 0, 0);
+}
+
+@media only screen and (min-width: 1440px) {
+.textNav {
+  font-size: x-large;
+}
+}
+
+@media only screen and (min-width: 2560px) {
+
+  .nav {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .textNav {
+  font-size: xx-large;
+}
+}

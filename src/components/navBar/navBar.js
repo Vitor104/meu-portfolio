@@ -1,19 +1,45 @@
+
+/*
+
 import React from "react";
 import styles from './navBar.module.css';
-import { NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Projects from "../projects/projects";
+import Home from "../home/home";
 
 
 function NavBar () {
     return (
         <nav className={styles.nav}>
-            <NavLink className={styles.textNav} activeClassName='teste' to={'/Home'}>Inicio</NavLink>
+        <Router>
+            
+                <Route exact path="/" component={Home} />
+                <Route path="/projetos" component={Projects} />
+                
+            
+        </Router>
 
-            <NavLink className={styles.textNav}  activeClassName='teste' to={'/Home'}>Projetos</NavLink>
 
-            <NavLink className={styles.textNav} activeClassName='teste' to={'/Home'}>Skills</NavLink>
+
+
+
+
+
+        
+            
         </nav>
     )
 }
 
 
 export default NavBar;
+
+/*
+<NavLink className={styles.textNav} activeClassName='teste' to={'/Home'}>Inicio</NavLink>
+
+            <NavLink className={styles.textNav}  activeClassName='teste' to={}>Projetos</NavLink>
+
+            <NavLink className={styles.textNav} activeClassName='teste' to={'/Home'}>Skills</NavLink>
+
+
+*/
