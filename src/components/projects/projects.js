@@ -6,7 +6,9 @@ function Projects () {
 
     return (
         <div className={styles.projectsContainer}>
-            <h1>hi</h1>
+            <div className={styles.title}>
+                <h2>Projetos</h2>
+            </div>
         </div>
     )
 }   

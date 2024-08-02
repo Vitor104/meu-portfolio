@@ -7,9 +7,10 @@
 .appContainer {
   text-align: center;
   width: 100%;
+  height: 110em;
   display: flex;
   flex-direction: column;
-  background-color: #F9F6F1;
+  background-color: #001F54;
 }
 
 
