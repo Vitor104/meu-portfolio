@@ -7,8 +7,52 @@
   .projectsContainer {
     color: white;
     width: 100%;
-    height: 50em;
+    height: 60em;
     display: flex;
     flex-direction: column;
-    
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #001F54;
+  }
+
+  .title {
+    font-size: large;
+  }
+
+  .projectsWindow {
+    height: 15em;
+    width: 15em;
+    background-color: white;
+    border-radius: 10px;
+    font-size: large;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .button {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: #00A9A5;
+    padding: 0.5em;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 2560px) {
+
+    .projectsContainer {
+      height: 80em;
+    }
+
+    .projectsWindow {
+      font-size: xx-large;
+    }
+
+    .title {
+      font-size: xx-large;
+    }
   }
