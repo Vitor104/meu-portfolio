@@ -27,7 +27,7 @@
     height: 100%;
     background-color: #00A9A5;
     animation-name: skillsEffect;
-    animation-duration: 2s;
+    animation-duration: 1s;
     border-radius: 10px;
     font-weight: bold;
   }
@@ -59,3 +59,21 @@
   @keyframes skillsEffect {
     from {width: 0px; font-size: 0;}
   }
+
+  @media only screen and (min-width: 768px) {
+    .percentageContainer {
+        width: 70%;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .percentageContainer {
+        width: 30em;
+    }
+  }
+
+@media only screen and (min-width: 2560px) {
+    .percentageContainer {
+        font-size: xx-large;
+    }
+}
