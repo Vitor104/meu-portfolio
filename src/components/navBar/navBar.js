@@ -21,7 +21,11 @@ function NavBar () {
                 Projetos
             </NavLink>
 
-            <NavLink className={styles.textNav} to={'/Home'}>Skills</NavLink>
+            <NavLink 
+            className={styles.textNav} 
+            to={'/Skills'}>
+              Skills
+            </NavLink>
         </nav>
 
          

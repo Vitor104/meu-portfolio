@@ -4,6 +4,7 @@ import NavBar from '../navBar/navBar';
 import Home from '../home/home';
 import Root from '../root/root';
 import Projects from '../projects/projects';
+import Skills from '../skills/skills';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path='/' element={ <Root />} />
         <Route exact path="/Home" element={<Home />} />
         <Route exact path="/Projects" element={<Projects />} />
+        <Route exact path="/Skills" element={<Skills />} />
       </Routes>
       
     </div>
