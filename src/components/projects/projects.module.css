@@ -7,7 +7,7 @@
   .projectsContainer {
     color: white;
     width: 100%;
-    height: 60em;
+    height: 90em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,10 +67,11 @@
   @media only screen and (min-width: 2560px) {
 
     .projectsContainer {
-      height: 80em;
+      height: 120em;
     }
 
     .projectsWindow {
+      height: 10em;
       font-size: xx-large;
     }
 
