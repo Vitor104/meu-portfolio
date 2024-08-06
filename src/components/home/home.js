@@ -113,12 +113,3 @@ function Home () {
 
 
 export default Home;
-/*
- <h2>Sobre mim</h2>
-                    <p className={styles.aboutMe}>
-                    Olá! Sou um desenvolvedor front-end apaixonado e dedicado, gosto de transformar problemas complexos em designs simples, bonitos e intuitivos. Estou sempre aprendendo e me mantendo atualizado com as últimas tendências. Atualmente, estou em busca da minha primeira oportunidade na área, onde eu possa contribuir com minhas habilidades e crescer como desenvolvedor. Sinta-se à vontade para conferir meu portfólio e entrar em contato comigo. Estou ansioso pela possibilidade de trabalharmos juntos!
-                    </p>
-
-
-
-*/
