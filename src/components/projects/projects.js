@@ -9,7 +9,7 @@ function Projects () {
             <div className={styles.title}>
                 <h2>Projetos</h2>
             </div>
-
+        
             <section className={styles.projectsWindow}>
                 <h3>SunSplash Haven</h3>
                 <Link to="https://vitor104.github.io/catalogo-de-produtos/index.html" className={styles.button}>
@@ -37,6 +37,7 @@ function Projects () {
                     Ver mais
                 </Link>
             </section>
+            
         </div>
     )
 }   
