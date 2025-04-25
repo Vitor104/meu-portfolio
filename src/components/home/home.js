@@ -48,7 +48,7 @@ function Home () {
 
                     {tggAbout ?
                         <p className={styles.aboutMe}>
-                        Olá! Sou um desenvolvedor apaixonado e dedicado, gosto de transformar problemas complexos em designs simples, bonitos e intuitivos. Estou sempre aprendendo e me mantendo atualizado com as últimas tendências. Atualmente, estou estudo ADS na Unifacisa, onde posso melhorar ainda mais minhas qualidades e explorar outras que, até então, eram desconhecidas.
+                        Olá! Sou um desenvolvedor apaixonado e dedicado, gosto de transformar problemas complexos em designs simples, bonitos e intuitivos. Estou sempre aprendendo e me mantendo atualizado com as últimas tendências. Atualmente, estou estudando ADS na Unifacisa, onde posso melhorar ainda mais minhas qualidades e explorar outras que, até então, eram desconhecidas.
                     </p>
                          :
                          <></>
