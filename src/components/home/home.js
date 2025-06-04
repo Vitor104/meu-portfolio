@@ -11,6 +11,8 @@ import esperanto from './esperanto.png';
 import ingles from './united-kingdom.png';
 
 
+
+
 function Home () {
 
     const [tggAbout, setTggAbout] = useState(false);
@@ -31,6 +33,9 @@ function Home () {
                     <article className={styles.nameAndRole}>
                         <h1 className={styles.myName}>João <br></br>  Vitor</h1>
                         <h2 className={styles.myRole}>Desenvolvedor Front-End</h2>
+                        <a href="/curriculo.pdf" download>
+                            <button type="button" className={styles.curriculoDownload}>Baixar currículo (PDF)</button>
+                        </a>
                     </article>
                     
                 </section>

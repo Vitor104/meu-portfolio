@@ -11,8 +11,8 @@ function Projects () {
             </div>
         
             <section className={styles.projectsWindow}>
-                <h3>SunSplash Haven</h3>
-                <Link to="https://vitor104.github.io/catalogo-de-produtos/index.html" className={styles.button}>
+                <h3>Couro Rico (em andamento)</h3>
+                <Link to="https://couro-rico.netlify.app/" className={styles.button}>
                     Ver mais
                 </Link>
             </section>
