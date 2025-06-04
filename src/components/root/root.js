@@ -11,11 +11,15 @@ function Root () {
             <h2 className={styles.title}>Portfolio</h2>
         </section>
         
-        <section>
+        <section className={styles.botoes}>
 
             <Link className={styles.button} to={'./Home'}>
                 Enter
             </Link>
+
+            <a href="/curriculo.pdf" download>
+                <button type="button" className={styles.curriculoDownload}>Baixar currículo (PDF)</button>
+            </a>
             
         </section>
     </div>
