@@ -10,14 +10,13 @@ function NavBar () {
             <NavLink 
               className={styles.textNav} 
               activeClassName={styles.active} 
-              to={'/Home'} exact>
+              to={'/'} end>
                 Inicio
             </NavLink>
 
             <NavLink 
-              className={styles.textNav}
-              activeClassName={styles.active} 
-              to={'/Projects'} exact>
+              className={styles.textNav} 
+              to={'/Projects'}>
                 Projetos
             </NavLink>
 

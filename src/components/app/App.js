@@ -1,4 +1,4 @@
-import {  Route, Routes } from 'react-router-dom';
+import {  Route, Routes, Navigate } from 'react-router-dom';
 import styles from './App.module.css';
 import NavBar from '../navBar/navBar';
 import Home from '../home/home';
@@ -14,9 +14,10 @@ function App() {
       <NavBar />
        
       <Routes>
-        <Route exact path="/Home" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route exact path="/Projects" element={<Projects />} />
         <Route exact path="/Skills" element={<Skills />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       
     </div>
