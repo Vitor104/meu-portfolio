@@ -5,79 +5,82 @@
   }
 
   .projectsContainer {
-    color: white;
+    /* CORREÇÃO 1: Padding-top para a navbar não cobrir o título */
+    padding-top: 120px; 
+    padding-bottom: 4rem;
+    
+    /* CORREÇÃO 2: Altura dinâmica, nunca fixa! */
+    height: 100%; 
     width: 100%;
-    height: 90em;
+    background-color: var(--bg-color); /* Usando a variável global */
+    
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    background-color: #001F54;
-  }
+    gap: 2rem;
+}
 
-  .title {
-    font-size: large;
-  }
+.title h2 {
+    font-size: 3rem;
+    background: linear-gradient(to right, #fff, var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
 
-  .projectsWindow {
-    height: 15em;
-    width: 15em;
-    background-color: white;
-    border-radius: 10px;
-    font-size: large;
-    color: black;
+/* O Container dos Cards agora é um GRID inteligente */
+.projectsGrid {
+    display: grid;
+    /* Isso aqui é mágica: cria colunas que cabem na tela, mínimo de 280px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px; /* Não deixa esticar demais em telas 4k */
+}
+
+.projectsWindow {
+    background: var(--glass-bg); /* Vidro fosco */
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2rem;
+    
+    /* Layout interno do card */
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-evenly;
-    animation-name: projectsEffect;
-    animation-duration: 1.5s;
-  }
+    gap: 1.5rem;
+    min-height: 250px; /* Altura mínima para ficarem uniformes */
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .button {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    background-color: #00A9A5;
-    padding: 0.5em;
-    border-radius: 10px;
+.projectsWindow:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glow);
+    border-color: var(--primary-color);
+}
+
+.projectsWindow h3 {
+    color: var(--text-main);
+    font-size: 1.5rem;
     text-align: center;
-  }
+}
 
-  @keyframes projectsEffect {
-    from {transform: translate(-150px); color: #001F54; background-color: #001F54;}
-  }
+.button {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 169, 165, 0.3);
+}
 
-
-  @keyframes detailButton {
-      0% {border-top: 1px solid black;}
-      40% {border-right: 1px solid black;}
-      60% {border-bottom: 1px solid black;}
-      80% {border-left: 1px solid black;}
-      100% {border: 1px solid black; background-color: black; color: white;}
-  }
-
-  @media only screen and (min-width: 768px) {
-    .button:hover {
-      animation-name: detailButton;
-      animation-duration: 1s;
-    }
-  }
-
-  
-
-  @media only screen and (min-width: 2560px) {
-
-    .projectsContainer {
-      height: 120em;
-    }
-
-    .projectsWindow {
-      height: 10em;
-      font-size: xx-large;
-    }
-
-    .title {
-      font-size: xx-large;
-    }
-  }
+.button:hover {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}

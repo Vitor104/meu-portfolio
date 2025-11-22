@@ -5,263 +5,123 @@
   }
 
   .homeContainer {
-    height: 110em;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .main {
-    background-color: #001F54;
-    height: 100em;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    
-  }
-
-  .nameAndRole {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .myName {
-    font-size: 50px;
-    text-transform: uppercase;
-    float: left;
-    color: #ffffff;
-  }
-
-  .myRole {
-    font-size: 15px;
-    text-transform: uppercase;
-    float: left;
-    color: white;
-  }
-
-
-  .containerOfAll {
-    color: rgb(255, 255, 255);
-    width: 16em;
-    height: 30em;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  
-  .aboutTitleAndBttn, .langTitleAndBttn {
-    width: 16em;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
-  }
-
-  .showAbout, .showLang {
-    background-color: #00A9A5;
-    border: none;
-    width: 3em;
-    border-radius: 50%;
-  }
-
-  .showAbout:active, .showLang:active {
-    border: 1px solid black;
-  }
-
-  .aboutMe {
-    animation-name: aboutShow;
-    animation-duration: 1s;
-    z-index: 1;
-    position: absolute;
-    background-color: white;
-    color: black;
-    width: 16em;
-    height: 30em;
-    padding: 1em;
-    border-radius: 10px;
-    border: none;
-  }
-
-  .arrow {
-    transition: 2s;
-    cursor: pointer;
-  }
-
-  .languages {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .flags {
-    height: 3em;
-    width: 3em;
-    animation-name: showFlag;
-    animation-duration: 1s;
-  }
-
-  .langLevel {
-    animation-name: showFlag;
-    animation-duration: 1s;
-  }
-
-
-  .footer {
-    height: 7em;
-    width: 100%;
-    background-color: #F5F5F5;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .socialGithub, .socialIn {
-    height: 4em;
-    width: 4em;
-   
-  }
-
-  .socialGithub {
-    background-color: rgb(0, 0, 0);
-    border-radius: 55%;
-    border: 1px solid black;
-  }
-
-  .myName, .myRole, .socialGithub, .socialIn, .aboutTitleAndBttn, .langTitleAndBttn, .curriculoDownload {
-    animation-name: homeEffect;
-    animation-duration: 1.5s;
-  }
-
-  @keyframes showFlag {
-    from {transform: translateY(-5px);}  
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-  @keyframes aboutShow {
-      from {transform: translateY(-5px);}  
-  }
+/* Hero Section (antigo Root + Header) */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 60vh;
+  animation: fadeIn 1s ease;
+}
 
-  @keyframes homeEffect {
-    from {transform: translate(-150px); color: #001F54}
-  }
+.myName {
+  font-size: 5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #fff, var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
 
-  @keyframes aboutMeEffect {
-    from {transform: translate(-150px); color: #001F54; background-color: #001F54;}
-  }
-  
-  @media only screen and (min-width: 768px) {
-    .myName {
-      font-size: 80px;
-    }
-  }
+.myRole {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
-  @media only screen and (min-width: 1024px) {
-    
-    .containerOfAll {
-      width: 40em;
-    }
+/* Bento Grid Layout */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
 
-    .aboutTitleAndBttn, .langTitleAndBttn {
-      width: 30em;
-    }
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .aboutMe {
-      width: 30em;
-      padding: 1em;
-      height: 12em;
-    }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--glow);
+  border-color: var(--primary-color);
+}
 
-    .myName {
-      font-size: 90px;
-    }
-  }
+.card h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
 
-  @media only screen and (min-width: 1440px) {
-    .myName {
-      font-size: 100px;
-    }
+.aboutText {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
 
-    .aboutTitleAndBttn, .langTitleAndBttn {
-      font-size: large;
-      width: 30em;
-      justify-content: center;
-      gap: 2em;
-    } 
+/* Languages com visual moderno */
+.langGrid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
-    .containerOfAll {
-      width: 60em;
-      height: 40em;
-    }
+.langItem {
+  background: rgba(255,255,255,0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-    .aboutMe, .langLevel {
-      font-size: large;
-    }
+.flagIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
-    .flags {
-      height: 6em;
-      width: 6em;
-    }
-  
-  }
-
-  @media only screen and (min-width: 2560px) {
+@media (max-width: 768px) {
     .homeContainer {
-      width: 50%;
-      margin: 0 auto;
-      height: 150em;
+        padding-top: 120px; /* Mais espaço no mobile se necessário */
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
-
+    
     .myName {
-      font-size: 150px;
+        font-size: 3.5rem; /* Reduz fonte gigante no mobile */
+        text-align: center;
+        width: 100%;
     }
-
+    
     .myRole {
-      font-size: 45px;
+        text-align: center;
+        width: 100%;
+        font-size: 1.2rem;
     }
-
-    .aboutTitleAndBttn, .langTitleAndBttn {
-      font-size: xx-large;
-    } 
-
-    .aboutMe {
-      font-size: xx-large;
+    
+    .hero {
+        align-items: center; /* Centraliza tudo no mobile */
+        height: auto;
+        margin-bottom: 3rem;
     }
-
-    .flags {
-      height: 10em;
-      width: 10em;
-    }
-  
-    .langLevel {
-      font-size: xx-large;
-    }
-  }
-  
-  /*
-  
-  .aboutMe {
-    width: 90%;
-    margin: 0 auto;
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 2em;
-    margin-top: 1em;
-    font-weight: bold;
-    color: black;
-    text-align: left;
-    text-wrap: wrap;
-    line-height: 25px;
-    white-space: wrap;
-    animation-name: aboutMeEffect;
-    animation-duration: 1.5s;
-  }
-
-  */
+}

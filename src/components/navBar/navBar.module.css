@@ -4,41 +4,49 @@
     box-sizing: border-box;
   }
 
-  .nav {
-    height: 7em;
-    width: 100%;
-    padding: 2em;
-    background-color: #F5F5F5;
+ .nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Ajustes de largura para mobile */
+    width: 90%; 
+    max-width: 500px;
+    
+    height: 60px;
+    background: rgba(15, 23, 42, 0.8); /* Dark Slate */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Suporte Safari */
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50px;
+    
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-  }
-  
-  .textNav {
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-a:active {
-  border-bottom: 5px solid #00A9A5;
+    justify-content: space-evenly; /* Distribui melhor os itens */
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
-  
- 
-  @media only screen and (min-width: 1440px) {
-  .textNav {
-    font-size: x-large;
-  }
-  }
-  
-  @media only screen and (min-width: 2560px) {
-  
+
+.textNav {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+}
+
+/* ... restante dos estilos de active e hover ... */
+
+/* Media Query para telas MUITO pequenas (iPhone SE, etc) */
+@media (max-width: 380px) {
     .nav {
-      width: 50%;
-      margin: 0 auto;
+        width: 95%;
+        gap: 0; /* Remove gap extra se faltar espaço */
+        padding: 0 10px;
     }
     .textNav {
-    font-size: xx-large;
-  }
-  }
+        font-size: 0.9rem;
+    }
+}

@@ -1,117 +1,78 @@
-import React, {useState} from "react";
+import React from "react";
 import styles from './home.module.css';
 import githubIcon from './githubIcon.png';
 import linkedinLogo from './logoLinkedin.png';
-import arrowDown from './arrow-down.svg';
-import arrowUp from './arrow-up.svg';
-import { Link } from "react-router-dom";
 import brazil from './brazil-.png';
-import franca from './france.png';
-import esperanto from './esperanto.png';
+import franca from './france.png'; // Verifique o nome do arquivo
 import ingles from './united-kingdom.png';
+import esperanto from './esperanto.png';
+import { Link } from "react-router-dom";
 
-
-
-
-function Home () {
-
-    const [tggAbout, setTggAbout] = useState(false);
-    const [tggLang, setTggLang] = useState(false);
-
-    const toggleAbout = () => {
-        setTggAbout(!tggAbout);
-    }
-    
-    const toggleLanguage = () => {
-        setTggLang(!tggLang);
-    }
-
+function Home() {
     return (
-        <div className={styles.homeContainer}>            
-           <main className={styles.main}>
-                <section>
-                    <article className={styles.nameAndRole}>
-                        <h1 className={styles.myName}>João <br></br>  Vitor</h1>
-                        <h2 className={styles.myRole}>Desenvolvedor Front-End</h2>
-                    </article>
-                    
-                </section>
-
-                <div className={styles.containerOfAll}>
-
-                <section className={styles.aboutMeContainer}>
-                   <div className={styles.aboutTitleAndBttn}>
-                        <h2>Sobre mim</h2>
-                        <button onClick={toggleAbout} className={styles.showAbout}>
-                            <img className={styles.arrow} src={tggAbout ? arrowUp : arrowDown} alt="Bootstrap" width="30" height="30" />
-                        </button>
-                    </div>
-                   
-
-                    {tggAbout ?
-                        <p className={styles.aboutMe}>
-                        Olá! Sou um desenvolvedor apaixonado e dedicado, gosto de transformar problemas complexos em designs simples, bonitos e intuitivos. Estou sempre aprendendo e me mantendo atualizado com as últimas tendências. Atualmente, estou estudando ADS na Unifacisa, onde posso melhorar ainda mais minhas qualidades e explorar outras que, até então, eram desconhecidas.
-                    </p>
-                         :
-                         <></>
-                            }
-
-
-                        
-                    
-                </section>
-
-                <section className={styles.languagesContainer}>
-                    <div className={styles.langTitleAndBttn}>
-                        <h2>Idiomas</h2>
-                        <button onClick={toggleLanguage} className={styles.showLang}>
-                            <img className={styles.arrow} src={tggLang ? arrowUp : arrowDown} alt="Bootstrap" width="30" height="30" />
-                        </button>
-                    </div>
-
-                    {tggLang ?
-                        <section className={styles.languages}>
-                            <article>
-                                <img className={styles.flags} src={brazil} alt="brazilian flag" />
-                                <p className={styles.langLevel}>Nativo</p>
-                            </article>
-
-                            <article>
-                                <img className={styles.flags} src={franca} alt="french flag"/>
-                                <p className={styles.langLevel}>B1</p>
-                            </article>
-
-                            <article>
-                                <img className={styles.flags} src={ingles} alt="united kingdom flag"/>
-                                <p className={styles.langLevel}>C1</p>
-                            </article>
-
-                            <article>
-                                <img className={styles.flags} src={esperanto} alt="esperanto flag"/>
-                                <p className={styles.langLevel}>A2</p>
-                            </article>
-                        </section>
-                         :
-                         <></>
-                            }      
-
-                </section>
-
-                </div>
-           </main>
-
-           <footer className={styles.footer}>
+        <div className={styles.homeContainer}>
             
-            <Link to='https://github.com/Vitor104'>
-                <img className={styles.socialGithub} src={githubIcon} alt="my github" />
-            </Link>
-            <Link to='www.linkedin.com/in/jvvitor'>
-                <img className={styles.socialIn} src={linkedinLogo} alt="my linkedin account" />
-            </Link>
-           </footer>
+            {/* Hero Section - Impacto Imediato */}
+            <section className={styles.hero}>
+                <h1 className={styles.myName}>João Vitor</h1>
+                <h2 className={styles.myRole}>Desenvolvedor Front-End</h2>
+                <div style={{marginTop: '2rem'}}>
+                     {/* Botão de download do CV estilizado aqui */}
+                    <a href="/curriculo.pdf" download className="btn-neon">
+                        Download CV
+                    </a>
+                </div>
+            </section>
+
+            {/* Bento Grid - Conteúdo sempre visível */}
+            <div className={styles.bentoGrid}>
+                
+                {/* Card Sobre Mim */}
+                <article className={styles.card}>
+                    <h2>Sobre mim</h2>
+                    <p className={styles.aboutText}>
+                        Transformo problemas complexos em designs simples e intuitivos. 
+                        Estudante de ADS na Unifacisa, apaixonado por React e o ecossistema Front-End.
+                        Sempre em busca da próxima tecnologia para dominar.
+                    </p>
+                </article>
+
+                {/* Card Idiomas */}
+                <article className={styles.card}>
+                    <h2>Idiomas</h2>
+                    <div className={styles.langGrid}>
+                        <div className={styles.langItem}>
+                            <img src={brazil} alt="PT-BR" className={styles.flagIcon} /> 
+                            <span>Nativo</span>
+                        </div>
+                        <div className={styles.langItem}>
+                            <img src={ingles} alt="EN" className={styles.flagIcon} /> 
+                            <span>Inglês (C1)</span>
+                        </div>
+                        <div className={styles.langItem}>
+                            <img src={franca} alt="FR" className={styles.flagIcon} /> 
+                            <span>Francês (B1)</span>
+                        </div>
+                        <div className={styles.langItem}>
+                            <img src={esperanto} alt="ES" className={styles.flagIcon} /> 
+                            <span>Esperanto (A2)</span>
+                        </div>
+                    </div>
+                </article>
+
+                {/* Card Social - Conecte-se */}
+                <article className={styles.card} style={{display: 'flex', justifyContent: 'center', gap: '2rem', alignItems: 'center'}}>
+                    <a href='https://github.com/Vitor104' target="_blank" rel="noreferrer">
+                        <img className={styles.socialGithub} src={githubIcon} alt="Github" style={{filter: 'invert(1)'}} width="50" />
+                    </a>
+                    <a href='https://www.linkedin.com/in/jvvitor' target="_blank" rel="noreferrer">
+                        <img className={styles.socialIn} src={linkedinLogo} alt="Linkedin" width="50"/>
+                    </a>
+                </article>
+
+            </div>
         </div>
     )
 }
-
 
 export default Home;
