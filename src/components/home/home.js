@@ -6,7 +6,7 @@ import brazil from './brazil-.png';
 import franca from './france.png'; // Verifique o nome do arquivo
 import ingles from './united-kingdom.png';
 import esperanto from './esperanto.png';
-import { Link } from "react-router-dom";
+
 
 function Home() {
     return (
