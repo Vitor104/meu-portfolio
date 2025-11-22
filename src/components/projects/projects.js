@@ -9,12 +9,11 @@ function Projects () {
                 <h2>Projetos</h2>
             </div>
         
-            {/* Adicionei esta div wrapper para controlar o Grid */}
             <div className={styles.projectsGrid}>
                 
                 <section className={styles.projectsWindow}>
-                    <h3>Couro Rico (em andamento)</h3>
-                    <Link to="https://couro-rico.netlify.app/" target="_blank" className={styles.button}>
+                    <h3>FlowBill</h3>
+                    <Link to="https://flowbill.netlify.app/" target="_blank" className={styles.button}>
                         Ver projeto
                     </Link>
                 </section>

@@ -10,20 +10,19 @@
     left: 50%;
     transform: translateX(-50%);
     
-    /* Ajustes de largura para mobile */
     width: 90%; 
     max-width: 500px;
     
     height: 60px;
-    background: rgba(15, 23, 42, 0.8); /* Dark Slate */
+    background: rgba(15, 23, 42, 0.8); 
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); /* Suporte Safari */
+    -webkit-backdrop-filter: blur(12px); 
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 50px;
     
     display: flex;
     align-items: center;
-    justify-content: space-evenly; /* Distribui melhor os itens */
+    justify-content: space-evenly; 
     z-index: 1000;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
@@ -37,13 +36,11 @@
     padding: 0.5rem;
 }
 
-/* ... restante dos estilos de active e hover ... */
 
-/* Media Query para telas MUITO pequenas (iPhone SE, etc) */
 @media (max-width: 380px) {
     .nav {
         width: 95%;
-        gap: 0; /* Remove gap extra se faltar espaço */
+        gap: 0; 
         padding: 0 10px;
     }
     .textNav {

@@ -29,24 +29,3 @@ function App() {
 }
 
 export default App;
-/*
-
-<nav className={styles.nav}>
-            <NavLink 
-              className={styles.textNav} 
-              activeClassName={styles.active} 
-              to={'/Home'}>
-                Inicio
-            </NavLink>
-
-            <NavLink 
-              className={styles.textNav}
-              activeClassName={styles.active} 
-              to={'Projects'}>
-                Projetos
-            </NavLink>
-
-            <NavLink className={styles.textNav} to={'/Home'}>Skills</NavLink>
-        </nav>
-
-*/

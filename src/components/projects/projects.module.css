@@ -5,15 +5,11 @@
   }
 
   .projectsContainer {
-    /* CORREÇÃO 1: Padding-top para a navbar não cobrir o título */
     padding-top: 120px; 
     padding-bottom: 4rem;
-    
-    /* CORREÇÃO 2: Altura dinâmica, nunca fixa! */
     height: 100%; 
     width: 100%;
-    background-color: var(--bg-color); /* Usando a variável global */
-    
+    background-color: var(--bg-color);     
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,31 +24,27 @@
     margin-bottom: 1rem;
 }
 
-/* O Container dos Cards agora é um GRID inteligente */
+
 .projectsGrid {
     display: grid;
-    /* Isso aqui é mágica: cria colunas que cabem na tela, mínimo de 280px */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 2rem;
     width: 90%;
-    max-width: 1200px; /* Não deixa esticar demais em telas 4k */
+    max-width: 1200px; 
 }
 
 .projectsWindow {
-    background: var(--glass-bg); /* Vidro fosco */
+    background: var(--glass-bg); 
     backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     padding: 2rem;
-    
-    /* Layout interno do card */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
-    min-height: 250px; /* Altura mínima para ficarem uniformes */
-    
+    min-height: 250px;     
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

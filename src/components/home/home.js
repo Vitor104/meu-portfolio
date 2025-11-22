@@ -3,7 +3,7 @@ import styles from './home.module.css';
 import githubIcon from './githubIcon.png';
 import linkedinLogo from './logoLinkedin.png';
 import brazil from './brazil-.png';
-import franca from './france.png'; // Verifique o nome do arquivo
+import franca from './france.png'; 
 import ingles from './united-kingdom.png';
 import esperanto from './esperanto.png';
 
@@ -12,22 +12,19 @@ function Home() {
     return (
         <div className={styles.homeContainer}>
             
-            {/* Hero Section - Impacto Imediato */}
             <section className={styles.hero}>
                 <h1 className={styles.myName}>João Vitor</h1>
                 <h2 className={styles.myRole}>Desenvolvedor Front-End</h2>
                 <div style={{marginTop: '2rem'}}>
-                     {/* Botão de download do CV estilizado aqui */}
                     <a href="/curriculo.pdf" download className="btn-neon">
                         Download CV
                     </a>
                 </div>
             </section>
 
-            {/* Bento Grid - Conteúdo sempre visível */}
             <div className={styles.bentoGrid}>
                 
-                {/* Card Sobre Mim */}
+
                 <article className={styles.card}>
                     <h2>Sobre mim</h2>
                     <p className={styles.aboutText}>
@@ -37,7 +34,6 @@ function Home() {
                     </p>
                 </article>
 
-                {/* Card Idiomas */}
                 <article className={styles.card}>
                     <h2>Idiomas</h2>
                     <div className={styles.langGrid}>
@@ -60,7 +56,6 @@ function Home() {
                     </div>
                 </article>
 
-                {/* Card Social - Conecte-se */}
                 <article className={styles.card} style={{display: 'flex', justifyContent: 'center', gap: '2rem', alignItems: 'center'}}>
                     <a href='https://github.com/Vitor104' target="_blank" rel="noreferrer">
                         <img className={styles.socialGithub} src={githubIcon} alt="Github" style={{filter: 'invert(1)'}} width="50" />
