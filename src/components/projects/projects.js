@@ -19,13 +19,6 @@ function Projects () {
                 </section>
 
                 <section className={styles.projectsWindow}>
-                    <h3>Calculator</h3>
-                    <Link to="https://vitor104.github.io/calculator/" target="_blank" className={styles.button}>
-                        Ver projeto
-                    </Link>
-                </section>
-
-                <section className={styles.projectsWindow}>
                     <h3>Jammming</h3>
                     <Link to="https://reactmusicappjam.netlify.app/" target="_blank" className={styles.button}>
                         Ver projeto
